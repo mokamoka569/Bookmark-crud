@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center py-5 ff-pacifico bookmark">bookmark</h1>
+        <h2 class="text-center py-3 header ff-righteous"><i class="fas fa-bookmark"></i>Bookmark your favorite sites <i class="fas fa-bookmark"></i></h2>
+        <div class="py-3">
+            <h4><i class="fas fa-book-bookmark"></i>  Site Name
+            </h4>
+            <input onclick="validation('siteName')" type="text" placeholder="bookmark name" class="form-control" id="siteName">
+            <p id="alertName" class="alert alert-danger d-none">you must start with letter not number minletter 3 maxletter 15</p>
+
+        </div>
+
+        <div class="py-3">
+            <h4><i class="fas fa-link"></i>Site URL
+            </h4>
+            <input onclick="validation('siteUrl')" type="text" placeholder="website url" class="form-control" id="siteUrl">
+            <p id="alertName" class="alert alert-danger d-none">you must start with https://</p>
+
+        </div>
+        <div class="text-center button">
+            <button onclick="addEmail()" class="btn btn-danger text-center py-1 px-3" id="btnSubmit">submit</button>
+        </div>
+        <table class="table text-center my-3">
+            <thead>
+                <tr>
+                    <th>index</th>
+                    <th>Website name</th>
+                    <th>visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+               
+            </tbody>
+        </table>
+    </div>
+    <!--js bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
